@@ -1,0 +1,49 @@
+{
+  "updated": "2026-09-25",
+  "projects": [
+    {
+      "id": "milk-run-demo",
+      "title": "Milk Run Planner",
+      "tag": "Transportation · Routing · Packaging Data",
+      "summary": "Packaging data checks → trailer fit → trucks per week per supplier → milk-run routes that consolidate direct FTL lanes. Scenario controls re-optimize the routes live.",
+      "result": "Real project: <b>8 FTL lanes from Mexico to Illinois consolidated into a milk run, ~$1M/yr savings</b>. My role: simulation and validation.",
+      "readme": "Packaging data checks → trailer fit → trucks per week → milk-run routes that consolidate direct FTL lanes (real project: 8 lanes, ~$1M/yr)",
+      "stack": ["Clarke–Wright", "Trailer Utilization", "Data Quality", "JavaScript"],
+      "demo": "https://leglsm.github.io/milk-run-demo/",
+      "code": "https://github.com/leglsm/milk-run-demo"
+    },
+    {
+      "id": "shortage-risk-demo",
+      "title": "Shortage Risk",
+      "tag": "Material Planning · Inventory Risk",
+      "summary": "Red-parts early warning: planning days-on-hand cross-checked with actual goods issues, so forecast-zeroed or \"obsolete\" parts that are still being consumed can't hide. One ranked list, linked to bin locations.",
+      "result": "Built after an <b>end-of-production shortage and customer escalation</b>. Local prototype demonstrated, next step is an SAP-integrated build.",
+      "readme": "Red-parts early warning: planning DOH cross-checked with actual issues, one ranked risk list linked to bin locations",
+      "stack": ["DOH", "SAP MM", "EOP Run-out", "JavaScript"],
+      "demo": "https://leglsm.github.io/shortage-risk-demo/",
+      "code": "https://github.com/leglsm/shortage-risk-demo"
+    },
+    {
+      "id": "rackscan-demo",
+      "title": "RackScan",
+      "tag": "Warehouse Safety · Facility Layout",
+      "summary": "Rack damage on a 3D warehouse layout: tap the damaged upright or beam, log it with a photo and a priority, and track it until it is repaired.",
+      "result": "An in-house alternative to a <b>~$15K/yr inspection subscription</b>. Demonstrated to the site director, replacement planned at contract end.",
+      "readme": "Rack damage on a 3D warehouse layout: point to the damaged upright or beam, log it with a photo, track the repair",
+      "stack": ["3D Layout", "Inspection Workflow", "Next.js / Supabase (original)"],
+      "demo": "https://leglsm.github.io/rackscan-demo/",
+      "code": "https://github.com/leglsm/rackscan-demo"
+    },
+    {
+      "id": "wms-lx03",
+      "title": "WMS LX03 Viewer",
+      "tag": "SAP WM · Inventory Visibility",
+      "summary": "Turns the flat SAP LX03 bin-stock report into a warehouse map: where every part is, how many HUs it has, how old it is, and which stock is blocked.",
+      "result": "For a <b>2,000+ SKU</b> warehouse, finding parts and problem stock felt <b>about 10× faster</b> in daily use.",
+      "readme": "SAP WM bin stock as a warehouse map: where every part is, how many HUs, how old",
+      "stack": ["SAP LX03", "Bin Map", "Stock Aging", "JavaScript"],
+      "demo": "https://leglsm.github.io/wms-lx03/",
+      "code": "https://github.com/leglsm/wms-lx03"
+    }
+  ]
+}

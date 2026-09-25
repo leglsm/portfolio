@@ -214,56 +214,8 @@
   <p class="section-label reveal">Built Things</p>
   <h2 class="section-title reveal">Live <span>Demos</span></h2>
   <p class="section-intro reveal">Each demo opens in your browser with fictional sample data. No login needed. Every repo explains the real problem, the approach and the result.</p>
-  <div class="projects-grid">
-
-    <div class="project-card reveal">
-      <p class="project-tag">Transportation · Routing · Packaging Data</p>
-      <h3>Milk Run Planner</h3>
-      <p>Packaging data checks → trailer fit → trucks per week per supplier → milk-run routes that consolidate direct FTL lanes. Scenario controls re-optimize the routes live.</p>
-      <p class="result">Real project: <b>8 FTL lanes from Mexico to Illinois consolidated into a milk run, ~$1M/yr savings</b>. My role: simulation and validation.</p>
-      <div class="project-stack"><span class="tag">Clarke–Wright</span><span class="tag">Trailer Utilization</span><span class="tag">Data Quality</span><span class="tag">JavaScript</span></div>
-      <div class="project-actions">
-        <a class="btn btn-primary btn-sm" href="https://leglsm.github.io/milk-run-demo/" target="_blank" rel="noopener">Open demo ↗</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/leglsm/milk-run-demo" target="_blank" rel="noopener">Code &amp; story</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <p class="project-tag">Material Planning · Inventory Risk</p>
-      <h3>Shortage Risk</h3>
-      <p>Red-parts early warning: planning days-on-hand cross-checked with actual goods issues, so forecast-zeroed or "obsolete" parts that are still being consumed can't hide. One ranked list, linked to bin locations.</p>
-      <p class="result">Built after an <b>end-of-production shortage and customer escalation</b>. Local prototype demonstrated, next step is an SAP-integrated build.</p>
-      <div class="project-stack"><span class="tag">DOH</span><span class="tag">SAP MM</span><span class="tag">EOP Run-out</span><span class="tag">JavaScript</span></div>
-      <div class="project-actions">
-        <a class="btn btn-primary btn-sm" href="https://leglsm.github.io/shortage-risk-demo/" target="_blank" rel="noopener">Open demo ↗</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/leglsm/shortage-risk-demo" target="_blank" rel="noopener">Code &amp; story</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <p class="project-tag">Warehouse Safety · Facility Layout</p>
-      <h3>RackScan</h3>
-      <p>Rack damage on a 3D warehouse layout: tap the damaged upright or beam, log it with a photo and a priority, and track it until it is repaired.</p>
-      <p class="result">An in-house alternative to a <b>~$15K/yr inspection subscription</b>. Demonstrated to the site director, replacement planned at contract end.</p>
-      <div class="project-stack"><span class="tag">3D Layout</span><span class="tag">Inspection Workflow</span><span class="tag">Next.js / Supabase (original)</span></div>
-      <div class="project-actions">
-        <a class="btn btn-primary btn-sm" href="https://leglsm.github.io/rackscan-demo/" target="_blank" rel="noopener">Open demo ↗</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/leglsm/rackscan-demo" target="_blank" rel="noopener">Code &amp; story</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <p class="project-tag">SAP WM · Inventory Visibility</p>
-      <h3>WMS LX03 Viewer</h3>
-      <p>Turns the flat SAP LX03 bin-stock report into a warehouse map: where every part is, how many HUs it has, how old it is, and which stock is blocked.</p>
-      <p class="result">For a <b>2,000+ SKU</b> warehouse, finding parts and problem stock felt <b>about 10× faster</b> in daily use.</p>
-      <div class="project-stack"><span class="tag">SAP LX03</span><span class="tag">Bin Map</span><span class="tag">Stock Aging</span><span class="tag">JavaScript</span></div>
-      <div class="project-actions">
-        <a class="btn btn-primary btn-sm" href="https://leglsm.github.io/wms-lx03/" target="_blank" rel="noopener">Open demo ↗</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/leglsm/wms-lx03" target="_blank" rel="noopener">Code &amp; story</a>
-      </div>
-    </div>
-
+  <div class="projects-grid" id="projectsGrid">
+    <p class="section-intro">Loading demos… If they don't appear, see them on <a href="https://github.com/leglsm" style="color:var(--accent2)">GitHub</a>.</p>
   </div>
   <p class="projects-note reveal">All demo data is fictional and generated with a fixed seed. No employer data is included.</p>
 </div>
@@ -282,7 +234,7 @@
     <div class="about-stats reveal">
       <div class="stat-card"><span class="stat-num">13+</span><span class="stat-label">Years Experience</span></div>
       <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Industries</span></div>
-      <div class="stat-card"><span class="stat-num">4</span><span class="stat-label">Live Demos</span></div>
+      <div class="stat-card"><span class="stat-num" id="demoCount">4</span><span class="stat-label">Live Demos</span></div>
       <div class="stat-card"><span class="stat-num">EN·KO</span><span class="stat-label">Bilingual</span></div>
     </div>
   </div>
@@ -335,7 +287,7 @@
   <div class="exp-timeline">
     <div class="exp-item reveal">
       <p class="exp-period">Jul 2020 — Present</p>
-      <p class="exp-role">Supply Chain &amp; Demand Planning Engineer</p>
+      <p class="exp-role">Supply Chain &amp; Production Planning Engineer</p>
       <p class="exp-company">Plastic Omnium (Opmobility) — Greer, SC</p>
       <ul class="exp-bullets">
         <li>Built statistical demand models to improve forecast accuracy (MAPE, Bias, WAPE) across complex SKU portfolios</li>
@@ -404,6 +356,31 @@
 </footer>
 
 <script>
+  /* Demo cards come from projects.json — the single list shared with the GitHub profile README.
+     To add a project, add one entry there; this page and the profile update themselves. */
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  fetch('projects.json', { cache: 'no-cache' }).then(r => r.json()).then(({ projects }) => {
+    document.getElementById('demoCount').textContent = projects.length;
+    document.getElementById('projectsGrid').innerHTML = projects.map(p => `
+    <div class="project-card visible">
+      <p class="project-tag">${esc(p.tag)}</p>
+      <h3>${esc(p.title)}</h3>
+      <p>${esc(p.summary)}</p>
+      <p class="result">${p.result}</p>
+      <div class="project-stack">${p.stack.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+      <div class="project-actions">
+        <a class="btn btn-primary btn-sm" href="${esc(p.demo)}" target="_blank" rel="noopener">Open demo ↗</a>
+        <a class="btn btn-outline btn-sm" href="${esc(p.code)}" target="_blank" rel="noopener">Code &amp; story</a>
+      </div>
+    </div>`).join('');
+  }).catch(() => {});
+
+  // In-page links scroll with JS so they also work inside embedded previews.
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  }));
+
   const reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) reveals.forEach(el => el.classList.add('visible'));
   else {
