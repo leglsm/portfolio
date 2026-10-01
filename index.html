@@ -14,7 +14,7 @@
 <meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0f1b2d;
@@ -65,7 +65,7 @@
     transition: transform 0.25s ease;
   }
   nav.nav-hidden { transform: translateY(-100%); }
-  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent2); letter-spacing: 0.04em; text-decoration: none; }
+  .nav-logo { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 1.1rem; color: var(--accent2); letter-spacing: 0.04em; text-decoration: none; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent2); }
@@ -74,7 +74,7 @@
 
   #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 8rem; max-width: 100%; padding-left: 8rem; padding-right: 8rem; }
   .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.7s 0.2s forwards; }
-  .hero-name { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.08; padding-bottom: 0.14em; overflow: visible; color: var(--text); margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.7s 0.4s forwards; }
+  .hero-name { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 800; line-height: 1.05; padding-bottom: 0.08em; letter-spacing: -0.01em; overflow: visible; color: var(--text); margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.7s 0.4s forwards; }
   .hero-name span { color: var(--accent2); display: block; }
   .hero-sub { font-size: 1.15rem; font-weight: 300; color: var(--muted); max-width: 600px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.7s 0.6s forwards; }
   .hero-links { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s 0.8s forwards; }
@@ -91,7 +91,7 @@
   .scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scrollPulse 2s infinite; }
 
   .section-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-  .section-title { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--text); margin-bottom: 3rem; }
+  .section-title { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 2.2rem; font-weight: 700; color: var(--text); margin-bottom: 3rem; }
   .section-title span { color: var(--accent2); }
   .section-intro { color: var(--muted); font-weight: 300; max-width: 680px; margin: -2rem 0 2.5rem; }
 
@@ -101,7 +101,7 @@
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
   .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem; transition: border-color 0.2s; }
   .stat-card:hover { border-color: var(--accent); }
-  .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent2); display: block; }
+  .stat-num { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 2rem; font-weight: 800; color: var(--accent2); display: block; }
   .stat-label { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.04em; }
 
   #skills { background: var(--navy2); max-width: 100%; }
@@ -110,7 +110,7 @@
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.8rem; transition: all 0.25s; }
   .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,155,212,0.12); }
   .skill-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-  .skill-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.8rem; }
+  .skill-card h3 { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.8rem; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .tag { font-size: 0.72rem; padding: 0.25rem 0.6rem; background: rgba(61,155,212,0.1); border: 1px solid rgba(61,155,212,0.2); border-radius: 3px; color: var(--accent2); letter-spacing: 0.02em; }
 
@@ -119,7 +119,7 @@
   .exp-item { position: relative; margin-bottom: 3rem; padding-left: 1.5rem; }
   .exp-item::before { content: ''; position: absolute; left: -2.4rem; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--navy); box-shadow: 0 0 0 3px rgba(61,155,212,0.2); }
   .exp-period { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
-  .exp-role { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text); }
+  .exp-role { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 1.15rem; font-weight: 700; color: var(--text); }
   .exp-company { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; font-style: italic; }
   .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .exp-bullets li { font-size: 0.9rem; color: var(--muted); font-weight: 300; padding-left: 1rem; position: relative; line-height: 1.6; }
@@ -133,7 +133,7 @@
   .project-card:hover::before { transform: scaleX(1); }
   .project-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(61,155,212,0.1); }
   .project-tag { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
-  .project-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.7rem; }
+  .project-card h3 { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.7rem; }
   .project-card p { font-size: 0.88rem; color: var(--muted); font-weight: 300; line-height: 1.7; margin-bottom: 0.8rem; }
   .project-card p.result { color: var(--text); font-weight: 400; }
   .project-card p.result b { color: var(--accent2); font-weight: 500; }
@@ -144,12 +144,12 @@
   .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
   .edu-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.6rem; transition: border-color 0.2s; }
   .edu-card:hover { border-color: var(--accent); }
-  .edu-degree { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+  .edu-degree { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
   .edu-school { font-size: 0.85rem; color: var(--accent2); margin-bottom: 0.3rem; }
   .edu-note { font-size: 0.78rem; color: var(--muted); font-style: italic; }
 
   #contact { text-align: center; padding: 6rem 4rem; }
-  .contact-email { font-family: 'Syne', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: var(--accent2); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; word-break: break-all; }
+  .contact-email { font-family: 'Archivo', 'Arial', sans-serif; font-stretch: 112%; font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-weight: 700; color: var(--accent2); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; word-break: break-all; }
   .contact-email:hover { border-color: var(--accent2); }
   .contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
 
