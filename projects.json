@@ -55,6 +55,17 @@
       "stack": ["Andon", "Poka-yoke", "Work Instructions", "Traceability", "JavaScript"],
       "demo": "https://leglsm.github.io/assembly-andon-demo/",
       "code": "https://github.com/leglsm/assembly-andon-demo"
+    },
+    {
+      "id": "pull-packout-demo",
+      "title": "Pull Pack-out Planner",
+      "tag": "Pull Scheduling · Cycle Counting · Curing Room",
+      "summary": "EPP parts cure 12–24 h, then are packed and shuttled to a warehouse in another building. Parts below 2 days on hand with an urgent OEM sequence go on a targeted cycle count; racks are then packed in the order warehouse stock runs out, back-scheduled from customer lead time and the shuttle schedule. Overstocked parts stay in the curing room.",
+      "result": "Real change (EPP plant, 2010–2015), planned with the team and implemented by me: the warehouse held at <b>about 90%</b> instead of overflowing, and the curing room ran the second shift from the printed plan <b>without adding indirect labor</b>.",
+      "readme": "Targeted cycle count + pull pack-out order for an EPP curing room (real change: warehouse held ~90%, no added indirect labor)",
+      "stack": ["Pull Scheduling", "Cycle Counting", "DOH", "Shuttle Back-scheduling", "JavaScript"],
+      "demo": "https://leglsm.github.io/pull-packout-demo/",
+      "code": "https://github.com/leglsm/pull-packout-demo"
     }
   ]
 }
