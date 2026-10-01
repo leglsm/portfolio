@@ -62,7 +62,9 @@
     background: rgba(15,27,45,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
+    transition: transform 0.25s ease;
   }
+  nav.nav-hidden { transform: translateY(-100%); }
   .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent2); letter-spacing: 0.04em; text-decoration: none; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
@@ -383,6 +385,19 @@
       </div>
     </div>`).join('');
   }).catch(() => {});
+
+  // Hide the fixed menu bar while scrolling down so it never covers the content; show it again on any scroll up.
+  (() => {
+    const nav = document.querySelector('nav');
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > lastY + 4 && y > nav.offsetHeight) nav.classList.add('nav-hidden');
+      else if (y < lastY - 4 || y <= nav.offsetHeight) nav.classList.remove('nav-hidden');
+      lastY = y;
+    }, { passive: true });
+    nav.addEventListener('focusin', () => nav.classList.remove('nav-hidden'));
+  })();
 
   // In-page links scroll with JS so they also work inside embedded previews.
   document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
