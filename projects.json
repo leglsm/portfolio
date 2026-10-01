@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-10-01",
   "projects": [
     {
       "id": "milk-run-demo",
@@ -44,6 +44,17 @@
       "stack": ["SAP LX03", "Bin Map", "Stock Aging", "JavaScript"],
       "demo": "https://leglsm.github.io/wms-lx03/",
       "code": "https://github.com/leglsm/wms-lx03"
+    },
+    {
+      "id": "assembly-andon-demo",
+      "title": "Engine Line Andon",
+      "tag": "Assembly · Andon · Poka-yoke · Traceability",
+      "summary": "4 assembly lines × 6 stations. Operator badge + base-engine QR scan opens a work instruction with a timer; wrong-line engines or parts lock the station until the supervisor fixes them; Quality / Maintenance / Material calls hit the office board instantly and hide Finish until the right responder scans in.",
+      "result": "Real system (engine assembly, 2015–2020): <b>about 20% less downtime</b> once calls reached managers and engineers the moment they were pressed. Serial-level traceability and an improvement checklist built from the call log.",
+      "readme": "4 lines × 6 stations: scan-gated work instructions, wrong-engine/part lockout, andon calls on the office board, engine traceability (real system: ~20% less downtime)",
+      "stack": ["Andon", "Poka-yoke", "Work Instructions", "Traceability", "JavaScript"],
+      "demo": "https://leglsm.github.io/assembly-andon-demo/",
+      "code": "https://github.com/leglsm/assembly-andon-demo"
     }
   ]
 }
