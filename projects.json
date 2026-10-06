@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "projects": [
     {
       "id": "milk-run-demo",
@@ -71,10 +71,12 @@
       "id": "pfep-console-demo",
       "title": "PFEP Console",
       "tag": "Packaging Data · Data Validation · Part Lifecycle · 3D Warehouse",
-      "summary": "One package database (PFEP) fed by signed supplier forms, SAP exports and material-team spreadsheets that disagree. Spreadsheets are validated cell by cell (OK / corrected / rejected) before they land; signed forms are read from the PDF and win conflicts; kg-in-gram-column, fixed stack and swapped-dimension errors are found and fixed; every planned part is classified Active / Phase-in / Run-out / Inactive / Obsolete; a 3D high-bay shows the lanes that can be freed.",
+      "summary": "One package database (PFEP) fed by signed supplier forms, SAP exports and material-team spreadsheets that disagree. Spreadsheets are validated cell by cell (OK / corrected / rejected) before they land; signed forms are read from the PDF and win conflicts; kg-in-gram-column, fixed stack and swapped-dimension errors are found and fixed; every planned part is classified Active / Phase-in / Run-out / Inactive / Obsolete; a 3D high-bay shows the lanes that can be freed, and a TV showcase flies to each urgent part and exports the top five as a video clip.",
       "result": "Real tool (current role), built by me from manager and floor requests: reported the <b>part-lifecycle 2×2</b> to my manager, answered material handlers' <b>where is it / is it alive / how is it packed</b> questions on the spot, and listed the lanes to free when a <b>slot reallocation</b> was requested.",
-      "readme": "Package database console: spreadsheet validation, signed-form ingest, systematic-error fixes, part lifecycle 2×2 and a 3D high-bay with lanes to free (real tool, current role)",
+      "readme": "Package database console: spreadsheet validation, signed-form ingest, systematic-error fixes, part lifecycle 2×2 a 3D high-bay with lanes to free, and a TV showcase that flies to urgent parts (real tool, current role)",
       "stack": ["PFEP", "Data Validation", "SAP MB51 / SQ01", "Part Lifecycle", "three.js", "pdf.js"],
+      "video": "https://leglsm.github.io/pfep-console-demo/docs/showcase-top5.mp4",
+      "poster": "https://leglsm.github.io/pfep-console-demo/docs/08-showcase.png",
       "demo": "https://leglsm.github.io/pfep-console-demo/",
       "code": "https://github.com/leglsm/pfep-console-demo"
     }
